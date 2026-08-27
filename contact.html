@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Harshit | Contact</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact-page">
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark nav-glass sticky-top">
+
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold brand" href="index.html">
+        <span class="brand-dot"></span>
+        Portfolio
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#nav"
+        aria-controls="nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation -->
+      <div class="collapse navbar-collapse" id="nav">
+
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="work.html">
+              Projects
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">
+              Resume
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">
+              Contact
+            </a>
+          </li>
+
+          <!-- GitHub -->
+          <li class="nav-item ms-lg-3">
+            <a
+              href="https://github.com/Harshit-sharma24"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-social"
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+          </li>
+
+          <!-- LinkedIn -->
+          <li class="nav-item">
+            <a
+              href="https://www.linkedin.com/in/harshit-sharma-199880396/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-social"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+
+       <!-- CTA -->
+<li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+  <a
+    href="work.html"
+    class="btn btn-brand rounded-pill px-4"
+  >
+    View Work
+    <i class="bi bi-arrow-up-right ms-1"></i>
+  </a>
+</li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <header class="contact-hero">
+
+    <div class="container">
+
+      <div class="contact-hero-inner text-center">
+
+        <p class="contact-kicker mb-2">
+          <i class="bi bi-chat-dots me-2"></i>
+          Get In Touch
+        </p>
+
+        <h1 class="contact-title">
+          Let’s <span>Connect</span>
+        </h1>
+
+        <p class="contact-sub text-white-50 mx-auto">
+          Have a project idea, collaboration opportunity, or simply want to connect?
+          Feel free to reach out. I’d be happy to hear from you.
+        </p>
+
+        <div class="contact-actions mt-4 d-flex justify-content-center gap-2 flex-wrap">
+
+          <a
+            class="btn btn-brand btn-lg rounded-pill px-5"
+            href="mailto:officialharshitsharma12@gmail.com"
+          >
+            <i class="bi bi-envelope me-2"></i>
+            Email Me
+          </a>
+
+          <a
+            class="btn btn-ghost btn-lg rounded-pill px-5"
+            href="work.html"
+          >
+            <i class="bi bi-grid-1x2 me-2"></i>
+            View Projects
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= CONTACT SECTION ================= -->
+
+  <section class="section-lg pt-0">
+
+    <div class="container">
+
+      <div class="row g-5 align-items-start">
+
+        <!-- ================= LEFT : FORM ================= -->
+
+        <div class="col-lg-7">
+
+          <div class="form-shell" id="messageForm">
+
+            <h2 class="form-title">
+              Send a Message
+            </h2>
+
+            <p class="text-white-50 mb-4">
+              Fill out the form below and your message will be sent directly to my email.
+            </p>
+
+            <form
+              id="contactForm"
+              action="https://formsubmit.co/officialharshitsharma12@gmail.com"
+              method="POST"
+              class="row g-3"
+              onsubmit="handleSubmit(event)"
+            >
+
+              <!-- FormSubmit settings -->
+
+              <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+              >
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Portfolio Message"
+              >
+
+              <input
+                type="hidden"
+                name="_template"
+                value="table"
+              >
+
+              <!-- Name -->
+
+              <div class="col-md-6">
+
+                <label class="form-label text-white-50">
+                  Your Name
+                </label>
+
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control form-control-lg input-glass"
+                  placeholder="Enter your name"
+                  required
+                >
+
+              </div>
+
+
+              <!-- Email -->
+
+              <div class="col-md-6">
+
+                <label class="form-label text-white-50">
+                  Your Email
+                </label>
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control form-control-lg input-glass"
+                  placeholder="example@gmail.com"
+                  required
+                >
+
+              </div>
+
+
+              <!-- Purpose -->
+
+              <div class="col-12">
+
+                <label class="form-label text-white-50">
+                  Purpose
+                </label>
+
+                <select
+                  name="purpose"
+                  class="form-select form-select-lg input-glass"
+                  required
+                >
+
+                  <option value="Project">
+                    Project
+                  </option>
+
+                  <option value="Internship">
+                    Internship
+                  </option>
+
+                  <option value="Collaboration">
+                    Collaboration
+                  </option>
+
+                  <option value="General">
+                    General
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- Message -->
+
+              <div class="col-12">
+
+                <label class="form-label text-white-50">
+                  Message
+                </label>
+
+                <textarea
+                  name="message"
+                  rows="5"
+                  class="form-control form-control-lg input-glass"
+                  placeholder="Write your message..."
+                  required
+                ></textarea>
+
+              </div>
+
+
+              <!-- Buttons -->
+
+              <div class="col-12 d-flex gap-2 flex-wrap mt-2">
+
+                <button
+                  type="submit"
+                  class="btn btn-brand btn-lg rounded-pill px-5"
+                >
+                  <i class="bi bi-send me-2"></i>
+                  Send Message
+                </button>
+
+                <a
+                  class="btn btn-ghost btn-lg rounded-pill px-5"
+                  href="mailto:officialharshitsharma12@gmail.com"
+                >
+                  <i class="bi bi-envelope-open me-2"></i>
+                  Email Directly
+                </a>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================= RIGHT : CONTACT INFO ================= -->
+
+        <div class="col-lg-5">
+
+          <div class="contact-info">
+
+            <!-- Location -->
+
+            <div class="info-line">
+
+              <i class="bi bi-geo-alt"></i>
+
+              <div>
+
+                <div class="info-label">
+                  Location
+                </div>
+
+                <div class="info-val">
+                  Bareilly, Uttar Pradesh, India
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Education -->
+
+            <div class="info-line">
+
+              <i class="bi bi-mortarboard"></i>
+
+              <div>
+
+                <div class="info-label">
+                  Education
+                </div>
+
+                <div class="info-val">
+                  B.Tech CSIT • 1st Year
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Focus -->
+
+            <div class="info-line">
+
+              <i class="bi bi-code-slash"></i>
+
+              <div>
+
+                <div class="info-label">
+                  Focus
+                </div>
+
+                <div class="info-val">
+                  Full-Stack Development • AI
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- GitHub -->
+
+            <div class="info-line">
+
+              <i class="bi bi-github"></i>
+
+              <div>
+
+                <div class="info-label">
+                  GitHub
+                </div>
+
+                <div class="info-val">
+
+                  <a
+                    class="link-lite"
+                    href="https://github.com/Harshit-sharma24"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open Profile
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- LinkedIn -->
+
+            <div class="info-line mb-0">
+
+              <i class="bi bi-linkedin"></i>
+
+              <div>
+
+                <div class="info-label">
+                  LinkedIn
+                </div>
+
+                <div class="info-val">
+
+                  <a
+                    class="link-lite"
+                    href="https://www.linkedin.com/in/harshit-sharma-199880396/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open Profile
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="info-sep"></div>
+
+
+            <!-- Email Note -->
+
+            <div class="info-note">
+
+              <div class="note-title">
+                Prefer Email?
+              </div>
+
+              <div class="note-text text-white-50">
+                You can also contact me directly through email for project,
+                internship, or collaboration discussions.
+              </div>
+
+              <a
+                class="btn btn-soft btn-lg rounded-pill px-5 mt-3"
+                href="mailto:officialharshitsharma12@gmail.com"
+              >
+                <i class="bi bi-envelope me-2"></i>
+                Email Now
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer-huge">
+
+    <div class="container">
+
+      <div class="row g-5 align-items-start">
+
+        <!-- BRAND / ABOUT -->
+
+        <div class="col-lg-6">
+
+          <div class="footer-brandline">
+
+            <span class="brand-dot"></span>
+
+            <span class="fw-bold fs-4">
+              Portfolio
+            </span>
+
+          </div>
+
+          <p class="text-white-50 mt-3 mb-0 footer-description">
+
+            B.Tech CSIT student passionate about building
+            AI-powered applications, full-stack systems,
+            and developer-focused projects with clean,
+            practical and modern interfaces.
+
+          </p>
+
+          <div class="footer-tagline mt-4">
+
+            <span>Build.</span>
+            <span>Learn.</span>
+            <span>Improve.</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="col-lg-3 col-md-6">
+
+          <div class="footer-head">
+            Quick Links
+          </div>
+
+          <div class="footer-links-col">
+
+            <a href="index.html">
+              <i class="bi bi-arrow-right-short"></i>
+              Home
+            </a>
+
+            <a href="about.html">
+              <i class="bi bi-arrow-right-short"></i>
+              About Me
+            </a>
+
+            <a href="work.html">
+              <i class="bi bi-arrow-right-short"></i>
+              Projects
+            </a>
+
+            <a href="resume.html">
+              <i class="bi bi-arrow-right-short"></i>
+              Resume
+            </a>
+
+            <a href="contact.html">
+              <i class="bi bi-arrow-right-short"></i>
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONNECT -->
+
+        <div class="col-lg-3 col-md-6">
+
+          <div class="footer-head">
+            Connect With Me
+          </div>
+
+          <div class="footer-social">
+
+            <a
+              class="social-btn2"
+              href="https://github.com/Harshit-sharma24"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+
+            <a
+              class="social-btn2"
+              href="https://www.linkedin.com/in/harshit-sharma-199880396/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a
+              class="social-btn2"
+              href="mailto:officialharshitsharma12@gmail.com"
+              aria-label="Email"
+            >
+              <i class="bi bi-envelope"></i>
+            </a>
+
+          </div>
+
+          <p class="text-white-50 small mt-3 mb-0">
+
+            Open to connecting, learning and building
+            meaningful projects.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+        <div class="footer-line"></div>
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+
+          <div class="text-white-50 small">
+
+            © <span id="year"></span>
+            Harshit Sharma. All rights reserved.
+
+          </div>
+
+          <div class="text-white-50 small">
+
+            Built with
+            <span class="footer-heart">♥</span>
+            HTML • CSS • Bootstrap
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= SCRIPTS ================= -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <script>
+
+    // Current year
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Contact form
+
+    function handleSubmit(event) {
+
+      event.preventDefault();
+
+      const form =
+        document.getElementById("contactForm");
+
+      const submitBtn =
+        form.querySelector('button[type="submit"]');
+
+      const oldBtnHtml =
+        submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+
+      submitBtn.innerHTML =
+        '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+
+
+      fetch(form.action, {
+
+        method: "POST",
+
+        body: new FormData(form),
+
+        headers: {
+          "Accept": "application/json"
+        }
+
+      })
+
+      .then(response => {
+
+        if (response.ok) {
+
+          alert(
+            "✅ Your message was sent successfully!"
+          );
+
+          form.reset();
+
+        } else {
+
+          alert(
+            "❌ Message could not be sent. Please try again."
+          );
+
+        }
+
+      })
+
+      .catch(() => {
+
+        alert(
+          "❌ Network error. Please try again."
+        );
+
+      })
+
+      .finally(() => {
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerHTML =
+          oldBtnHtml;
+
+      });
+
+    }
+
+  </script>
+
+</body>
+
+</html>

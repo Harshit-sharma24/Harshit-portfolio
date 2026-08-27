@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Harshit Sharma - B.Tech CSIT Student Resume">
+<title>Harshit Sharma | Resume</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+    :root {
+        --ink: #171a1f;
+        --ink-soft: #4d5560;
+        --blue: #174a8b;
+        --blue-dark: #123d73;
+        --line: #d3d8de;
+        --paper: #ffffff;
+        --screen: #edf0f4;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+        background: var(--screen);
+        color: var(--ink);
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* ========== TOOLBAR ========== */
+    .toolbar {
+        width: 210mm;
+        margin: 18px auto 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .download-btn {
+        border: none;
+        background: var(--blue);
+        color: #fff;
+        padding: 11px 24px;
+        border-radius: 6px;
+        font-size: 13.5px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 3px 10px rgba(23, 74, 139, 0.25);
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .download-btn:hover { background: var(--blue-dark); }
+    .toolbar {
+    width: 210mm;
+    margin: 18px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    border: none;
+    background: #ffffff;
+    color: var(--blue);
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.back-btn:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+    /* ========== A4 PAPER ========== */
+    .resume-paper {
+        width: 210mm;
+        min-height: 297mm;
+           box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+        margin: 14px auto 40px;
+        background: var(--paper);
+        padding: 18mm 18mm 16mm;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+
+        display: flex;
+        flex-direction: column;
+    }
+    .resume-section,
+.education-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+    /* ========== HEADER ========== */
+    .resume-header { margin-bottom: 22px; }
+
+    .resume-name {
+        margin: 0;
+        font-size: 33px;
+        line-height: 1.1;
+        font-weight: 750;
+        letter-spacing: -0.3px;
+    }
+
+    .resume-role {
+        margin-top: 6px;
+        color: var(--blue);
+        font-size: 13.5px;
+        font-weight: 650;
+        letter-spacing: 0.1px;
+    }
+
+    .contact-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+        font-size: 11.5px;
+        color: var(--ink-soft);
+    }
+
+    .contact-item { display: inline-flex; align-items: center; white-space: nowrap; }
+
+    .contact-item:not(:last-child)::after {
+        content: "|";
+        margin: 0 11px;
+        color: #aab0b8;
+    }
+
+    .contact-item i { margin-right: 5px; color: var(--blue); font-size: 11.5px; }
+    .contact-item a { color: var(--ink-soft); text-decoration: none; }
+    .contact-item a:hover { color: var(--blue); text-decoration: underline; }
+
+    .header-line { height: 2.5px; background: var(--blue); margin-top: 14px; }
+
+    /* ========== SECTIONS ========== */
+   .resume-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+    .section-title {
+        margin: 0 0 12px;
+        padding-bottom: 5px;
+        border-bottom: 1.5px solid var(--line);
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+    }
+
+    .summary {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* ========== SKILLS ========== */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        column-gap: 14px;
+        row-gap: 9px;
+        margin: 0;
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .skill-label { font-weight: 700; color: var(--ink); }
+    .skill-value { color: var(--ink-soft); }
+
+    /* ========== PROJECTS ========== */
+    .project { margin-bottom: 20px; }
+    .project:last-child { margin-bottom: 0; }
+
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 14px;
+    }
+
+    .project-name { font-size: 14px; line-height: 1.3; font-weight: 750; color: var(--ink); }
+
+    .project-links { display: flex; gap: 12px; white-space: nowrap; font-size: 11.5px; }
+    .project-links a { color: var(--blue); text-decoration: none; font-weight: 700; }
+    .project-links a:hover { text-decoration: underline; }
+
+    .project-stack {
+        margin-top: 4px;
+        margin-bottom: 7px;
+        color: var(--blue);
+        font-size: 11.5px;
+        line-height: 1.4;
+        font-weight: 700;
+    }
+
+    .project ul { margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 12.5px; line-height: 1.6; }
+    .project li { margin-bottom: 4px; }
+
+    /* ========== EDUCATION ========== */
+   .education-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+    .education-item:last-child { margin-bottom: 0; }
+
+    .education-university { font-size: 14.5px; line-height: 1.35; font-weight: 750; color: var(--ink); }
+
+    .education-degree-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 14px;
+        margin-top: 3px;
+    }
+
+    .education-degree { font-size: 13px; line-height: 1.4; font-weight: 650; color: var(--ink); }
+    .education-date { font-size: 12px; line-height: 1.4; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+    .education-location { margin-top: 3px; font-size: 12px; line-height: 1.4; color: var(--ink-soft); }
+    .education-status { margin-top: 3px; font-size: 11.5px; line-height: 1.4; color: var(--ink-soft); }
+
+    /* ========== LEARNING ========== */
+    .learning { margin: 0; color: var(--ink-soft); font-size: 12.5px; line-height: 1.6; }
+    .learning strong { color: var(--ink); }
+
+
+    .footer-note {
+        margin-top: 24px;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        font-size: 10.5px;
+        color: #9aa1ab;
+        text-align: center;
+    }
+
+    /* ========== PRINT ========== */
+    @page { size: A4; margin: 0; }
+
+    @media print {
+        body { background: #fff; }
+        .toolbar { display: none !important; }
+      .resume-paper {
+    width: 210mm;
+    min-height: 297mm;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+    margin: 14px auto 40px;
+    background: var(--paper);
+    padding: 18mm 18mm 16mm;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+
+    display: flex;
+    flex-direction: column;
+}
+        a { color: inherit; text-decoration: none; }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 850px) {
+        body { background: #fff; }
+        .toolbar { width: 100%; padding: 12px 14px 0; margin: 0; }
+        .resume-paper { width: 100%; min-height: auto; margin: 0; padding: 28px 22px 35px; box-shadow: none; }
+        .resume-name { font-size: 27px; }
+        .contact-row { gap: 6px 0; }
+        .contact-item:not(:last-child)::after { margin: 0 8px; }
+        .project-header { align-items: flex-start; }
+    }
+
+    @media (max-width: 600px) {
+        .resume-paper { padding: 24px 18px 30px; }
+        .skills-grid { grid-template-columns: 115px 1fr; column-gap: 8px; }
+        .project-header { flex-direction: column; gap: 3px; }
+        .project-links { order: 2; }
+        .education-degree-row { flex-direction: column; gap: 2px; }
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+<div class="toolbar">
+
+    <a
+        href="index.html"
+        class="back-btn"
+    >
+        <i class="bi bi-arrow-left"></i>
+        Portfolio
+    </a>
+
+    <button class="download-btn" onclick="downloadResume()">
+        <i class="bi bi-download"></i>
+        Download PDF
+    </button>
+
+</div>
+
+<main class="resume-paper">
+
+    <header class="resume-header">
+        <h1 class="resume-name">Harshit Sharma</h1>
+        <div class="resume-role">B.Tech CSIT Student &bull; Software Development &bull; Full-Stack &amp; AI</div>
+
+      <div class="contact-row">
+
+    <span class="contact-item">
+        <i class="bi bi-geo-alt"></i>
+        Bareilly, Uttar Pradesh, India
+    </span>
+
+    <span class="contact-item">
+        <i class="bi bi-envelope"></i>
+        <a href="mailto:officialharshitsharma12@gmail.com">Email</a>
+    </span>
+
+    <span class="contact-item">
+        <i class="bi bi-github"></i>
+        <a
+            href="https://github.com/Harshit-sharma24"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub
+        </a>
+    </span>
+
+    <span class="contact-item">
+        <i class="bi bi-linkedin"></i>
+        <a
+            href="https://www.linkedin.com/in/harshit-sharma-199880396/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LinkedIn
+        </a>
+    </span>
+
+    <span class="contact-item">
+        <i class="bi bi-globe2"></i>
+        <a href="index.html">
+            Portfolio
+        </a>
+    </span>
+
+</div>
+
+        <div class="header-line"></div>
+    </header>
+
+    <section class="resume-section">
+        <h2 class="section-title">Summary</h2>
+        <p class="summary">
+            First-year B.Tech CSIT student interested in full-stack development and AI-powered applications.
+            Hands-on developer who learns by building practical web and mobile projects &mdash; from AI-integrated
+            web apps to a React Native mobile app &mdash; while strengthening programming, problem-solving, and
+            Data Structures &amp; Algorithms fundamentals using C++.
+        </p>
+    </section>
+
+    <section class="resume-section">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-label">Languages</div>
+        <div class="skill-value">
+            C, C++, JavaScript, TypeScript, SQL, Kotlin
+        </div>
+
+        <div class="skill-label">Frontend</div>
+        <div class="skill-value">
+            React, Next.js, React Native (Expo), HTML, CSS, Tailwind CSS
+        </div>
+
+        <div class="skill-label">Backend</div>
+        <div class="skill-value">
+            Node.js, Express.js, FastAPI, REST APIs, Microservices
+        </div>
+
+        <div class="skill-label">Databases</div>
+        <div class="skill-value">
+            MongoDB, MySQL, PostgreSQL
+        </div>
+
+        <div class="skill-label">AI / LLMs</div>
+        <div class="skill-value">
+            LLM Integration, Prompt Engineering, AI-Powered Application Development
+        </div>
+
+        <div class="skill-label">Tools</div>
+        <div class="skill-value">
+            Git, GitHub, Android Development
+        </div>
+
+    </div>
+</section>
+
+    <section class="resume-section">
+        <h2 class="section-title">Projects</h2>
+
+        <article class="project">
+            <div class="project-header">
+                <div class="project-name">NOVA AI &mdash; AI Voice Assistant</div>
+                <div class="project-links">
+                    <a href="https://novaaa-ai.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a href="https://github.com/Harshit-sharma24/Nova--Ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="project-stack">React &bull; Node.js &bull; Express &bull; MongoDB &bull; Groq API</div>
+            <ul>
+                <li>Built a full-stack AI voice assistant connecting a React frontend with a Node.js and Express backend.</li>
+                <li>Integrated the Groq API to process user requests and generate real-time AI-powered responses.</li>
+                <li>Implemented MongoDB-based data handling and deployed the project with a publicly accessible live demo.</li>
+            </ul>
+        </article>
+
+        <article class="project">
+            <div class="project-header">
+                <div class="project-name">AI Mock Interviewer</div>
+                <div class="project-links">
+                    <a href="https://ai-mock-intervieww.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a href="https://github.com/Harshit-sharma24/AI-mock-interview" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="project-stack">React.js &bull; Groq API (LLaMA 3.1) &bull; CSS</div>
+            <ul>
+                <li>Developed a web app that generates topic-based interview questions and answers using the Groq LLM API.</li>
+                <li>Implemented chunk-based AI response generation to avoid output cutoff on longer answers.</li>
+                <li>Designed a clean interface for selecting interview topics and controlling the number of generated questions.</li>
+            </ul>
+        </article>
+
+        <article class="project">
+            <div class="project-header">
+                <div class="project-name">Snapix &mdash; Camera App</div>
+                <div class="project-links">
+                    <a href="https://github.com/Harshit-sharma24/Snapix-Camera-App" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="project-stack">React Native &bull; Expo &bull; TypeScript</div>
+            <ul>
+                <li>Built a mobile camera application with live preview, grid alignment, multi-level zoom, and flash control.</li>
+                <li>Implemented real-time filter previews and a grid-based gallery with multi-select and delete functionality.</li>
+                <li>Handled device camera permissions and media storage to deliver a smooth save/retake/share workflow.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="resume-section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-item">
+            <div class="education-university">Mahatma Jyotiba Phule Rohilkhand University (MJPRU)</div>
+            <div class="education-degree-row">
+                <div class="education-degree">B.Tech &mdash; Computer Science &amp; Information Technology (CSIT)</div>
+                <div class="education-date">2026 &ndash; Present</div>
+                
+            
+            </div>
+            
+            <div class="education-location">Bareilly, Uttar Pradesh, India</div>
+            <div class="education-status">1st Year, 1st Semester</div>
+        </div>
+
+    </section>
+
+   
+
+   
+
+</main>
+<script>
+  
+
+async function downloadResume() {
+    const resume = document.querySelector(".resume-paper");
+
+    const options = {
+        margin: 0,
+        filename: "Harshit-Sharma-Resume.pdf",
+        image: {
+            type: "jpeg",
+            quality: 1
+        },
+        html2canvas: {
+            scale: 2,
+            useCORS: true,
+            backgroundColor: "#ffffff",
+            scrollX: 0,
+            scrollY: 0
+        },
+        jsPDF: {
+            unit: "mm",
+            format: "a4",
+            orientation: "portrait"
+        },
+        pagebreak: {
+            mode: ["avoid-all"]
+        }
+    };
+
+    await html2pdf()
+        .set(options)
+        .from(resume)
+        .save();
+}
+</script>
+
+</body>
+</html>
